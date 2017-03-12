@@ -1,0 +1,12 @@
+{
+  "name": "pug-lint-loader",
+  "version": "0.0.1",
+  "description": "Pug linter for Webpack",
+  "main": "index.js",
+  "author": "Jack Works <zjwpeter@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^1.0.3",
+    "pug-lint": "^2.4.0"
+  }
+}
