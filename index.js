@@ -9,14 +9,13 @@ var configured = false;
 
 module.exports = function (content) {
     this.cacheable();
-    if(!configured) {
-        var config = webpack_util.getOptions(this);
-        linter.configure(parse(config));
-    }
+    var config = webpack_util.getOptions(this);
+
+    if(!configured) linter.configure(parse(config));
 
     var result = linter.checkString(content);
     if(result.length) {
-        this.emitError(result.sort(function (a, b) {
+        [this.emitError, this.emitWarning][config.emitError ? 0 : 1](result.sort(function (a, b) {
             var line = a.line - b.line;
             if(line == 0) return (a.column || 0) - (b.column || 0);
             else return line;
