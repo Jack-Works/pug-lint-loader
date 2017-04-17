@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Jack Works <zjwpeter@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/Jack-Works/pug-lint-loader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jack-Works/pug-lint-loader.git"
+  },
   "dependencies": {
     "loader-utils": "^1.0.3",
     "pug-lint": "^2.4.0"

@@ -27,4 +27,5 @@ module.exports = function (content) {
                 problem.code.toLowerCase().replace(/^pug:/, '').replace(/^lint_/, ''));
         }).join('\n'));
     }
+    return content
 }
