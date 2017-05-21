@@ -20,12 +20,12 @@ module.exports = function (content) {
             if(line == 0) return (a.column || 0) - (b.column || 0);
             else return line;
         }).map(function (problem) {
-            return util.format('    [%s:%s] %s | Rule: %s',
+            return util.format('\t\x1b[31m[%s:%s] %s\x1b[0m | Rule: \x1b[91m%s\x1b[0m',
                 problem.line,
                 problem.column || 0,
                 problem.msg,
                 problem.code.toLowerCase().replace(/^pug:/, '').replace(/^lint_/, ''));
-        }).join('\n'));
+        }).join('\n\n'));
     }
     return content
 }
